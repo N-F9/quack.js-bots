@@ -8,8 +8,9 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "dev": "npm run build && node ./out/index.js"
-  },
+    "dev": "rm -rf ./out && npm run build && node ./out/index.js",
+		"compile": "npm run lint && npm run format && npm run dev"
+	},
   "dependencies": {
     "@n-f9/quack.js": "0.0.6-beta.3",
     "discord.js": "^13.6.0",
