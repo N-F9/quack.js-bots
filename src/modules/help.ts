@@ -7,8 +7,9 @@ export default (Quack: QuackJS) => {
 		description: 'Provides the user with helpful information and links.',
 		guilds: ['936423188005531688'],
 		permission: 'everyone',
-		async execute(interation: DiscordJS.CommandInteraction) {
-			interation.reply(
+		defaultPermission: true,
+		async execute(interaction: DiscordJS.CommandInteraction) {
+			interaction.reply(
 				QuackJSUtils.Discord.Embed({
 					embeds: [
 						{

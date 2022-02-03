@@ -7,6 +7,7 @@ export default (Quack: QuackJS) => {
 		description: 'Search a specific query.',
 		guilds: ['936423188005531688'],
 		permission: 'everyone',
+		defaultPermission: true,
 		options: [
 			{
 				name: 'query',
@@ -15,11 +16,11 @@ export default (Quack: QuackJS) => {
 				required: true,
 			},
 		],
-		async execute(interation: DiscordJS.CommandInteraction) {
-			const query = interation.options.getString('query')
+		async execute(interaction: DiscordJS.CommandInteraction) {
+			const query = interaction.options.getString('query')
 
 			if (!query)
-				return interation.reply(
+				return interaction.reply(
 					QuackJSUtils.Discord.Embed({
 						embeds: [
 							{
@@ -30,7 +31,7 @@ export default (Quack: QuackJS) => {
 					}),
 				)
 
-			interation.reply(
+			interaction.reply(
 				QuackJSUtils.Discord.Embed({
 					embeds: [
 						{

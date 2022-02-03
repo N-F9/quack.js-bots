@@ -5,6 +5,7 @@ export default (Quack) => {
         description: 'Search a specific query.',
         guilds: ['936423188005531688'],
         permission: 'everyone',
+        defaultPermission: true,
         options: [
             {
                 name: 'query',
@@ -13,10 +14,10 @@ export default (Quack) => {
                 required: true,
             },
         ],
-        async execute(interation) {
-            const query = interation.options.getString('query');
+        async execute(interaction) {
+            const query = interaction.options.getString('query');
             if (!query)
-                return interation.reply(QuackJSUtils.Discord.Embed({
+                return interaction.reply(QuackJSUtils.Discord.Embed({
                     embeds: [
                         {
                             title: 'An Error Occurred',
@@ -24,7 +25,7 @@ export default (Quack) => {
                         },
                     ],
                 }));
-            interation.reply(QuackJSUtils.Discord.Embed({
+            interaction.reply(QuackJSUtils.Discord.Embed({
                 embeds: [
                     {
                         title: 'DuckDuckGo Search',

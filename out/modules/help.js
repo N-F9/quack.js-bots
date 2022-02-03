@@ -5,8 +5,9 @@ export default (Quack) => {
         description: 'Provides the user with helpful information and links.',
         guilds: ['936423188005531688'],
         permission: 'everyone',
-        async execute(interation) {
-            interation.reply(QuackJSUtils.Discord.Embed({
+        defaultPermission: true,
+        async execute(interaction) {
+            interaction.reply(QuackJSUtils.Discord.Embed({
                 embeds: [
                     {
                         title: 'Quack.js Help Menu',
