@@ -18,4 +18,4 @@
 npm i @n-f9/quack.js
 ```
 
-The main Discord bot for the Quack.js community.
+Discord bots created/used by the Quack.js community.
