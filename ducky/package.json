@@ -1,7 +1,7 @@
 {
   "name": "ducky",
   "version": "0.0.0",
-  "description": "A general-purpose Discord bot",
+  "description": "An economy bot for engagement",
   "main": "out/index.js",
   "type": "module",
   "scripts": {

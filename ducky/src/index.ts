@@ -6,7 +6,15 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const Quack = new QuackJS(process.env.TOKEN as string, {})
+const Quack = new QuackJS(process.env.TOKEN as string, {
+	backups: [
+		{
+			file: 'database.sqlite',
+			scheduling: '0 0 23 * * *',
+		},
+	],
+	logsFolder: true,
+})
 
 const files = QuackJSUtils.GetFiles('./out/modules')
 
