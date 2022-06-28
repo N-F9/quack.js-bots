@@ -32,7 +32,7 @@ export default (Quack: QuackJS) => {
 							],
 						},
 					],
-				}),
+				}) as DiscordJS.InteractionReplyOptions,
 			)
 		},
 	})

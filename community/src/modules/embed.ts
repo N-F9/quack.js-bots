@@ -63,7 +63,7 @@ export default (Quack: QuackJS) => {
 							color: '#FFD300',
 						},
 					],
-				}),
+				}) as DiscordJS.InteractionReplyOptions,
 			)
 		},
 	})

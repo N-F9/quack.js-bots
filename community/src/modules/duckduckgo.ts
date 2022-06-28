@@ -28,7 +28,7 @@ export default (Quack: QuackJS) => {
 								color: '#FFD300',
 							},
 						],
-					}),
+					}) as DiscordJS.InteractionReplyOptions,
 				)
 
 			interaction.reply(
@@ -40,7 +40,7 @@ export default (Quack: QuackJS) => {
 							description: `[${query}](https://duckduckgo.com/?q=${encodeURIComponent(query)})`,
 						},
 					],
-				}),
+				}) as DiscordJS.InteractionReplyOptions,
 			)
 		},
 	})
